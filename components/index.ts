@@ -7,5 +7,30 @@ import Choose from './Choose'
 import Design from './Design'
 import Testimonials from './Testimonials'
 import Blog from './Blog'
-
-export { Hero, Header, SlideBar, Footer, Product, Choose, Design, Testimonials,Blog }
+import Contact from './Contact'
+import ContactUs from './ContactUs'
+import ContactForm from './ContactForm'
+import AllBlog from './AllBlog'
+import Blog2 from './Blog2'
+import Services from './Services'
+import AllServices from './AllServices'
+import About from './About'
+export {
+  About,
+  Services,
+  AllServices,
+  Hero,
+  Header,
+  SlideBar,
+  Footer,
+  Product,
+  Choose,
+  Design,
+  Testimonials,
+  Blog,
+  Contact,
+  ContactUs,
+  ContactForm,
+  AllBlog,
+  Blog2,
+}

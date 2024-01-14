@@ -59,18 +59,17 @@ const Footer = () => {
           <div>
             <Image
               src='/footer.png'
-              width={400}
-              height={325}
+              width={300}
+              height={225}
               alt='footer'
-              className='object-contain absolute  right-20 -top-52'
+              className='object-contain absolute  right-20 -top-40'
             />
           </div>
         </div>
          <h1 className='md:text-2xl text-lg font-semibold '>
-              
               FurniVogue
             </h1>
-        <div className='grid pt-16 gap-6 items-start md:grid-cols-[1.5fr,2fr]'>
+        <div className='grid gap-6 items-start md:grid-cols-[1.5fr,2fr]'>
           <div className=' space-y-4'>
            
             <p>

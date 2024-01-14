@@ -2,15 +2,13 @@ import Image from 'next/image'
 import { BLogProps } from '@/types'
 import { recentBlogPosts } from '@/utils'
 import Link from 'next/link'
-const Blog = () => {
+const Blog2 = () => {
   return (
     <div>
-      <div className='md:container  mx-auto pb-40 w-[90vw]'>
-        <h1 className=' text-3xl capitalize font-bold  md:text-4xl'>
-          recent blog
-        </h1>
+      <div className='md:container  mx-auto py-20 w-[90vw]'>
+       
         <Link href='#'>
-          <div className='grid mt-4 sm:grid-cols-2 lg:grid-cols-3 gap-8 items-start'>
+          <div className='grid sm:grid-cols-2 lg:grid-cols-3 gap-8 items-start'>
             {recentBlogPosts
               .map((item: BLogProps) => {
                 const { author, title, image, date, desc } = item
@@ -35,7 +33,7 @@ const Blog = () => {
                   </article>
                 )
               })
-              .slice(0, 3)}
+             }
           </div>
         </Link>
       </div>
@@ -43,4 +41,4 @@ const Blog = () => {
   )
 }
 
-export default Blog
+export default Blog2

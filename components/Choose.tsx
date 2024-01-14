@@ -4,7 +4,7 @@ import { features } from '@/utils'
 
 const Choose = () => {
   return (
-    <div className='pb-40'>
+    <div className='py-20'>
       <div className='mx-auto md:container w-[90vw]'>
         <div className=' grid items-center gap-7 md:grid-cols-2 '>
           <div className='space-y-4'>

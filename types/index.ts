@@ -2,7 +2,7 @@
 export interface NavbarProps {
   name: string
   url: string
-  icon?: any
+  icon: any
 }
 
 export interface FeaturesProps{
