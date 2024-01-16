@@ -15,7 +15,13 @@ import Blog2 from './Blog2'
 import Services from './Services'
 import AllServices from './AllServices'
 import About from './About'
+import Team from './Team'
+import Shop from './Shop'
+import AllShop from './AllShop'
 export {
+  AllShop,
+  Shop,
+  Team,
   About,
   Services,
   AllServices,

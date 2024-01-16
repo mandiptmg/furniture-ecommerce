@@ -6,9 +6,14 @@ const Blog = () => {
   return (
     <div>
       <div className='md:container  mx-auto pb-40 w-[90vw]'>
-        <h1 className=' text-3xl capitalize font-bold  md:text-4xl'>
-          recent blog
-        </h1>
+        <div className='flex justify-between items-center'>
+          <h1 className=' text-3xl capitalize font-bold  md:text-4xl'>
+            recent blog
+          </h1>
+          <Link href='/blog' className='capitalize text-base underline hover:no-underline font-medium'>
+            view all posts
+          </Link>
+        </div>
         <Link href='#'>
           <div className='grid mt-4 sm:grid-cols-2 lg:grid-cols-3 gap-8 items-start'>
             {recentBlogPosts

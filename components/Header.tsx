@@ -3,7 +3,7 @@
 import { FaRegUser, FaBars } from 'react-icons/fa'
 import { GiShoppingCart } from 'react-icons/gi'
 
-const menuItems = [
+const menuItems:NavbarProps[] = [
   { name: 'Home', url: '/' },
   { name: 'Shop', url: '/shop' },
   { name: 'About us', url: '/about-us' },
@@ -18,6 +18,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useState } from 'react'
 import { SlideBar } from '.'
+import { NavbarProps } from '@/types'
 
 const Header = () => {
   const pathname = usePathname()

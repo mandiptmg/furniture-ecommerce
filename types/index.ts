@@ -1,14 +1,21 @@
 
 export interface NavbarProps {
-  name: string
+  name?: string
   url: string
-  icon: any
+  icon?: JSX.Element
+}
+
+export interface EmployeeProps {
+  name: string
+  position: string
+  image: string
+  description: string
 }
 
 export interface FeaturesProps{
   name:string,
   desc:string,
-  icon?:any
+  icon:any
 }
  
 export interface LeatherChairProps {

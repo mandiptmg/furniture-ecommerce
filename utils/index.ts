@@ -70,7 +70,6 @@ export const features = [
   },
 ]
 
-
 export const recentBlogPosts = [
   {
     title: 'Choosing the Right Furniture for Your Living Room',
@@ -119,5 +118,40 @@ export const recentBlogPosts = [
       'https://c0.wallpaperflare.com/preview/81/93/70/the-john-rylands-library-john-rylands-library-manchester-manchester-university.jpg',
     date: '2024-03-05', // Add date property
     author: 'Emily Davis', // Add author property
+  },
+]
+
+export const employee = [
+  {
+    name: 'Suresh Tamang',
+    position: 'Frontend Developer',
+    image:
+      'https://img.freepik.com/free-photo/portrait-happy-male-with-broad-smile_176532-8175.jpg?size=626&ext=jpg&ga=GA1.2.132872417.1696338957&semt=sph',
+    description:
+      'Passionate about creating seamless user experiences with a focus on frontend technologies.',
+  },
+  {
+    name: 'Priya Rai',
+    position: 'UX Designer',
+    image:
+      'https://img.freepik.com/free-photo/brunette-business-woman-with-wavy-long-hair-blue-eyes-stands-holding-notebook-hands_197531-343.jpg?size=626&ext=jpg&ga=GA1.2.132872417.1696338957&semt=sph',
+    description:
+      'Dedicated to crafting intuitive and visually appealing designs to enhance user satisfaction.',
+  },
+  {
+    name: 'Anita Gurung',
+    position: 'Marketing Specialist',
+    image:
+      'https://img.freepik.com/free-photo/young-beautiful-woman-pink-warm-sweater-natural-look-smiling-portrait-isolated-long-hair_285396-896.jpg?size=626&ext=jpg&ga=GA1.2.132872417.1696338957&semt=sph',
+    description:
+      'Creative marketing professional with a strategic mindset for promoting e-commerce products effectively.',
+  },
+  {
+    name: 'Ravi Gautam',
+    position: 'Digital Marketing Manager',
+    image:
+      'https://img.freepik.com/free-photo/cheerful-indian-businessman-smiling-closeup-portrait-jobs-career-campaign_53876-129417.jpg?size=626&ext=jpg&ga=GA1.2.132872417.1696338957&semt=sph',
+    description:
+      'Strategically drives digital marketing initiatives to boost online presence and sales for our e-commerce business.',
   },
 ]

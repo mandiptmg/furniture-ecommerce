@@ -25,23 +25,27 @@ const Product = () => {
           .map((item: LeatherChairProps) => {
             const { img, price, name } = item
             return (
-              <article key={name} className='relative group'>
-                <Image
-                  src={img}
-                  alt={name}
-                  width={300}
-                  height={200}
-                  className='aspect-square group-hover:-mt-4 rounded-t-lg duration-700 object-cover'
-                />
-                <div className='text-center relative  grid place-items-center mt-4 space-y-2'>
-                  <h1 className='text-base md:text-lg '>{name}</h1>
-                  <h1 className='font-bold '>${price}</h1>
+              <article key={name} className='group'>
+                <div className='h-[462px]  relative max-w-[300px]'>
+                  <div>
+                    <Image
+                      src={img}
+                      alt={name}
+                      width={250}
+                      height={250}
+                      className='w-[300px] h-[300px] rounded-t-lg group-hover:-pt-4 mb-[30px]  duration-700 object-cover'
+                    />
+                  </div>
+                  <div className='text-center absolute w-full h-[220px] bottom-0 pt-16 bg-opacity-0 group-hover:bg-opacity-100   rounded-lg duration-700 group-hover:bg-gray-400/50 grid place-items-center space-y-2'>
+                    <h1 className='text-base md:text-lg '>{name}</h1>
+                    <h1 className='font-bold '>${price}</h1>
 
-                  <div className='opacity-0 group-hover:opacity-100'>
-                    <div className='bg-gray-400/50 absolute -top-36  duration-700  left-0 w-full grid items-end h-0 group-hover:h-64 rounded-lg place-items-center'>
-                      <button className='w-10 h-10 rounded-full bg-black absolute -bottom-4 text-white grid place-items-center'>
-                        <FaPlus />
-                      </button>
+                    <div className=''>
+                      <div className=' w-full grid items-end  rounded-lg place-items-center'>
+                        <button className='w-10 h-10 rounded-full bg-black  text-white opacity-0 group-hover:opacity-100 -mb-8 grid place-items-center'>
+                          <FaPlus />
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>

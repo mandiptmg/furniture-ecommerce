@@ -6,13 +6,10 @@ import { NavbarProps } from '@/types'
 interface ButtonProps {
   button: boolean
   setButton: (value: boolean) => void
+  menuItems: NavbarProps[]
 }
 
-const SlideBar = ({
-  button,
-  setButton,
-  menuItems,
-}: ButtonProps & { menuItems: NavbarProps[] }) => {
+const SlideBar = ({ button, setButton, menuItems }: ButtonProps) => {
   const pathname = usePathname()
 
   const handleCloseButtonClick = () => {
