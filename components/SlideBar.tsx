@@ -36,6 +36,7 @@ const SlideBar = ({ button, setButton, menuItems }: ButtonProps) => {
             {menuItems.map((item: NavbarProps) => (
               <li key={item.name}>
                 <Link
+                  onClick={handleCloseButtonClick}
                   href={item.url}
                   className={`${
                     pathname === item.url ? 'underline text-gray-400' : ''

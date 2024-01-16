@@ -61,7 +61,7 @@ const Header = () => {
       </div>
       <div>
         <SlideBar
-          setButton={() => setButton(false)}
+          setButton={(booloean) => setButton(booloean)}
           button={button}
           menuItems={menuItems}
         />
