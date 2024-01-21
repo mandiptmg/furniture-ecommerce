@@ -1,17 +1,16 @@
 'use client'
 
-import { FaRegUser, FaBars } from 'react-icons/fa'
+import { FaBars } from 'react-icons/fa'
+
 import { GiShoppingCart } from 'react-icons/gi'
 
-const menuItems:NavbarProps[] = [
+const menuItems: NavbarProps[] = [
   { name: 'Home', url: '/' },
   { name: 'Shop', url: '/shop' },
   { name: 'About us', url: '/about-us' },
   { name: 'Services', url: '/services' },
   { name: 'Blog', url: '/blog' },
   { name: 'Contact us', url: '/contact-us' },
-  { icon: <FaRegUser />, url: '/login' },
-  { icon: <GiShoppingCart />, url: '/cart' },
 ]
 
 import Link from 'next/link'
@@ -19,6 +18,7 @@ import { usePathname } from 'next/navigation'
 import { useState } from 'react'
 import { SlideBar } from '.'
 import { NavbarProps } from '@/types'
+import AuthComponent from './AuthComponent'
 
 const Header = () => {
   const pathname = usePathname()
@@ -46,12 +46,19 @@ const Header = () => {
                 >
                   <div className='flex item-center gap-6'>
                     <h1> {item.name}</h1>{' '}
-                    <span className='text-2xl'>{item.icon}</span>
                   </div>
                 </Link>
               </li>
             ))}
           </ul>
+        </div>
+        <div className='text-2xl flex items-center text-gray-300 gap-6'>
+          <div>
+            <AuthComponent />
+          </div>
+          <Link href='/cart'>
+            <GiShoppingCart />
+          </Link>
         </div>
         <div className='lg:hidden'>
           <button onClick={() => setButton(true)} className='text-xl '>
@@ -59,6 +66,7 @@ const Header = () => {
           </button>
         </div>
       </div>
+
       <div>
         <SlideBar
           setButton={(booloean) => setButton(booloean)}
