@@ -1,9 +1,8 @@
-import { IconType } from "react-icons"
 
 export interface NavbarProps {
   name?: string
   url: string
-  icon?:IconType
+  icon?:JSX.Element
 }
 
 export interface EmployeeProps {
