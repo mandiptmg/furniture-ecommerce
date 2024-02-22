@@ -17,10 +17,12 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useState } from 'react'
 import { SlideBar } from '.'
-import { NavbarProps } from '@/types'
+import { NavbarProps, StoreProduct, StateProps } from '@/types'
 import AuthComponent from './AuthComponent'
+import { useSelector } from 'react-redux'
 
 const Header = () => {
+  const { productData } = useSelector((state: StateProps) => state.next)
   const pathname = usePathname()
   const [button, setButton] = useState(false)
 
@@ -35,17 +37,19 @@ const Header = () => {
           </Link>
         </div>
         <div className='lg:block hidden'>
-          <ul className='flex items-center font-semibold uppercase text-gray-300 gap-6'>
+          <ul className='flex items-center font-semibold uppercase text-white gap-6'>
             {menuItems.map((item) => (
               <li key={item.name}>
-                <Link
-                  href={item.url}
-                  className={`${
-                    pathname === item.url ? 'underline text-white' : ''
-                  } hover:underline duration-700  `}
-                >
+                <Link href={item.url}>
                   <div className='flex item-center gap-6'>
-                    <h1> {item.name}</h1>{' '}
+                    <h1
+                      className={`${
+                        pathname === item.url ? 'p-1  bg-black/50' : ''
+                      } hover:bg-black/50  p-1 w-full duration-700  `}
+                    >
+                      {' '}
+                      {item.name}
+                    </h1>{' '}
                   </div>
                 </Link>
               </li>
@@ -56,9 +60,20 @@ const Header = () => {
           <div>
             <AuthComponent />
           </div>
-          <Link href='/cart'>
-            <GiShoppingCart />
-          </Link>
+          <div className='relative'>
+            <Link href='/cart'>
+              <GiShoppingCart />
+            </Link>
+            <span className='bg-white text-black/80 w-4 h-4 rounded-full text-center text-sm absolute -top-2 -right-2'>
+              {productData
+                ? productData.reduce(
+                    (total: number, product: StoreProduct) =>
+                      total + product.quantity,
+                    0
+                  )
+                : 0}
+            </span>
+          </div>
         </div>
         <div className='lg:hidden'>
           <button onClick={() => setButton(true)} className='text-xl '>

@@ -3,49 +3,64 @@ export const leatherChairs = [
     name: 'ClassicComfort Leather Chair',
     price: 299.99,
     img: '/chair/ClassicComfort Leather Chair.jpg',
+    description: 'Sink into luxury with this classic leather chair. Its timeless design ensures both comfort and style, making it a perfect addition to any living space or office setting.',
   },
-  { name: 'Masa Armchair', price: 349.99, img: '/chair/Masa Armchair.jpg' },
+  {
+    name: 'Masa Armchair',
+    price: 349.99,
+    img: '/chair/Masa Armchair.jpg',
+    description: 'Elevate your lounging experience with the Masa Armchair. Crafted with premium leather and boasting a sleek, modern design, this armchair seamlessly combines comfort with contemporary aesthetics.',
+  },
   {
     name: 'RegalRelax Leather Seat',
     price: 279.99,
     img: '/chair/RegalRelax Leather Seat.jpg',
+    description: 'Indulge in ultimate relaxation with the RegalRelax Leather Seat. Its elegant design and plush leather upholstery provide a luxurious seating experience, perfect for unwinding after a long day.',
   },
   {
     name: 'LuxeLounge Executive Chair',
     price: 449.99,
     img: '/chair/LuxeLounge Executive Chair.jpg',
+    description: 'Make a statement with the LuxeLounge Executive Chair. This opulent piece features rich leather upholstery and a sophisticated design, ideal for adding a touch of luxury to any office or study.',
   },
   {
     name: 'PoshPalisade Leather Recliner',
     price: 399.99,
     img: '/chair/PoshPalisade Leather Recliner.jpg',
+    description: 'Experience unparalleled comfort with the PoshPalisade Leather Recliner. With its premium leather construction and ergonomic design, this recliner offers both style and support for hours of relaxation.',
   },
   {
     name: 'UrbanChic Leather Accent Chair',
     price: 329.99,
     img: '/chair/UrbanChic Leather Accent Chair.jpg',
+    description: 'Add a dash of sophistication to your decor with the UrbanChic Leather Accent Chair. Its chic design and high-quality leather make it the perfect statement piece for any modern living space.',
   },
   {
     name: 'VintageVista Leather Lounge',
     price: 299.99,
     img: '/chair/VintageVista Leather Lounge.jpg',
+    description: 'Transport yourself to a bygone era with the VintageVista Leather Lounge. This timeless piece exudes vintage charm with its leather upholstery and classic design, creating a cozy retreat in any room.',
   },
   {
     name: 'SereneSaddle Armchair',
     price: 319.99,
     img: '/chair/SereneSaddle Armchair.jpg',
+    description: 'Find tranquility in the SereneSaddle Armchair. Its unique saddle-like design offers both comfort and style, making it a standout piece in any contemporary or eclectic interior.',
   },
   {
     name: 'VelvetVogue Executive Chair',
     price: 449.99,
     img: '/chair/VelvetVogue Executive Chair.jpg',
+    description: 'Elevate your workspace with the VelvetVogue Executive Chair. Combining plush velvet accents with luxurious leather upholstery, this chair exudes elegance and sophistication, perfect for any executive office.',
   },
   {
     name: 'TimelessTannin Leather Seat',
     price: 369.99,
     img: '/chair/TimelessTannin Leather Seat.jpg',
+    description: 'Invest in timeless style with the TimelessTannin Leather Seat. Crafted with durable tannin-finished leather, this seat offers both longevity and elegance, making it a versatile addition to any home or office.',
   },
-]
+];
+
 
 export const features = [
   {

@@ -1,3 +1,4 @@
+import { IconType } from "react-icons"
 
 export interface NavbarProps {
   name?: string
@@ -15,14 +16,21 @@ export interface EmployeeProps {
 export interface FeaturesProps{
   name:string,
   desc:string,
-  icon:any
+  icon:IconType
 }
  
 export interface LeatherChairProps {
   img: string
   price: number
   name: string
+  description?:string
 
+}
+export interface StoreProduct {
+  img: string
+  price: number
+  name: string
+  quantity:number
 }
 
 export interface BLogProps{
@@ -31,4 +39,9 @@ export interface BLogProps{
   image:string,
   author:string,
   date:string
+}
+export interface StateProps {
+  productData: []
+  userInfo: null | string
+  next: any
 }
