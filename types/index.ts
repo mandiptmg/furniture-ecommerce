@@ -3,7 +3,7 @@ import { IconType } from "react-icons"
 export interface NavbarProps {
   name?: string
   url: string
-  icon?: JSX.Element
+  icon?:IconType
 }
 
 export interface EmployeeProps {
@@ -16,7 +16,7 @@ export interface EmployeeProps {
 export interface FeaturesProps{
   name:string,
   desc:string,
-  icon:IconType
+  icon:any
 }
  
 export interface LeatherChairProps {

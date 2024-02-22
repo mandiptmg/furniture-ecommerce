@@ -16,7 +16,7 @@ const Choose = () => {
               repellendus.
             </p>
             <div className='grid grid-cols-2 gap-y-6 items-start'>
-              {features.map((item: FeaturesProps) => {
+              {features.map((item:FeaturesProps) => {
                 const { name, desc, icon } = item
                 return (
                   <div key={name} className='grid gap-6 space-x-3'>
