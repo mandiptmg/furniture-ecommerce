@@ -48,7 +48,7 @@ const CartItem = () => {
                       className='w-40 h-40 aspect-square object-cover'
                     />
                     <div className='justify-between w-full space-y-2 md:flex items-center gap-4'>
-                      <h1 className='md:w-64  font-semibold text-base md:text-lg text-green-700/60  '>
+                      <h1 className='lg:w-64  font-semibold text-base md:text-lg text-green-700/60  '>
                         {item.name}
                       </h1>
                       <h1 className='text-gray-400 text-sm'>${item.price}</h1>
@@ -100,17 +100,17 @@ const CartItem = () => {
                   </div>
                 ))}
                 <hr />
-                <div className='flex gap-4 flex-col-reverse md:flex-row  w-full justify-between items-end'>
+                <div className='flex gap-4 flex-col-reverse md:flex-row  justify-between items-end'>
                   {' '}
                   <div>
                     <Link href='/shop'>
-                      <button className='uppercase w-full tracking-widest  px-5 py-2 md:inline-flex bg-white text-black text-base'>
+                      <button className='uppercase text-center w-full  tracking-widest  px-5 py-2 md:inline-flex bg-white text-black text-base'>
                         continue
                       </button>
                     </Link>
                   </div>
-                  <div className='w-full md:inline-flex bg-white p-4'>
-                    <div className='grid text-black items-center '>
+                  <div className=' w-full md:w-[250px] bg-white p-4'>
+                    <div className='grid   text-black items-center '>
                       <h1 className='justify-between gap-2 flex'>
                         Subtotal:{' '}
                         <span className='text-gray-400'>${totalAmount}</span>
