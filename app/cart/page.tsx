@@ -47,65 +47,69 @@ const CartItem = () => {
                       height={400}
                       className='w-40 h-40 aspect-square object-cover'
                     />
-                    <h1 className='w-64  font-semibold text-lg text-green-700/60  '>
-                      {item.name}
-                    </h1>
-                    <h1 className='text-gray-400 text-sm'>${item.price}</h1>
-                    <div className='flex items-center '>
-                      <button
-                        onClick={() =>
-                          dispatch(
-                            decreaseProduct({
-                              name: item.name,
-                              img: item.img,
-                              price: item.price,
-                              quantity: 1,
-                            })
-                          )
-                        }
-                        className='bg-gray-500 text-white p-1'
-                      >
-                        <FaMinus />
-                      </button>
-                      <span className=' py-1 px-2'>{item.quantity}</span>
-                      <button
-                        onClick={() =>
-                          dispatch(
-                            increaseProduct({
-                              name: item.name,
-                              img: item.img,
-                              price: item.price,
-                              quantity: 1,
-                            })
-                          )
-                        }
-                        className='bg-gray-500 text-white p-1'
-                      >
-                        <FaPlus />
-                      </button>
+                    <div className='justify-between w-full space-y-2 md:flex items-center gap-4'>
+                      <h1 className='md:w-64  font-semibold text-base md:text-lg text-green-700/60  '>
+                        {item.name}
+                      </h1>
+                      <h1 className='text-gray-400 text-sm'>${item.price}</h1>
+                      <div className='justify-between  inline-flex items-center gap-4 lg:gap-20'>
+                        <div className='flex items-center '>
+                          <button
+                            onClick={() =>
+                              dispatch(
+                                decreaseProduct({
+                                  name: item.name,
+                                  img: item.img,
+                                  price: item.price,
+                                  quantity: 1,
+                                })
+                              )
+                            }
+                            className='bg-gray-500 text-white p-1'
+                          >
+                            <FaMinus />
+                          </button>
+                          <span className=' py-1 px-2'>{item.quantity}</span>
+                          <button
+                            onClick={() =>
+                              dispatch(
+                                increaseProduct({
+                                  name: item.name,
+                                  img: item.img,
+                                  price: item.price,
+                                  quantity: 1,
+                                })
+                              )
+                            }
+                            className='bg-gray-500 text-white p-1'
+                          >
+                            <FaPlus />
+                          </button>
+                        </div>
+                        <h1 className='text-semibold hidden md:block'>
+                          ${item.price * item.quantity}
+                        </h1>
+                        <button
+                          onClick={() => dispatch(removeItem(item.name))}
+                          className='text-red-500 p-1 text-2xl pr-4'
+                        >
+                          <FaRegTimesCircle />
+                        </button>
+                      </div>
                     </div>
-                    <h1 className='text-semibold'>
-                      ${item.price * item.quantity}
-                    </h1>
-                    <button
-                      onClick={() => dispatch(removeItem(item.name))}
-                      className='text-red-500 p-1 text-2xl pr-4'
-                    >
-                      <FaRegTimesCircle />
-                    </button>
                   </div>
                 ))}
                 <hr />
-                <div className='flex w-full justify-between items-end'>
+                <div className='flex gap-4 flex-col-reverse md:flex-row  w-full justify-between items-end'>
                   {' '}
                   <div>
                     <Link href='/shop'>
-                      <button className='uppercase tracking-widest px-5 py-2 inline-flex bg-white text-black text-base'>
+                      <button className='uppercase w-full tracking-widest  px-5 py-2 md:inline-flex bg-white text-black text-base'>
                         continue
                       </button>
                     </Link>
                   </div>
-                  <div className='inline-flex bg-white p-4'>
+                  <div className='w-full md:inline-flex bg-white p-4'>
                     <div className='grid text-black items-center '>
                       <h1 className='justify-between gap-2 flex'>
                         Subtotal:{' '}

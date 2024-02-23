@@ -45,7 +45,7 @@ const ProductData = () => {
               />
             </div>{' '}
             <div className='space-y-2 w-full h-full bg-black/50 p-4'>
-              <h1 className='text-2xl uppercase font-semibold text-green-600/60'>
+              <h1 className='text-lg md:text-2xl uppercase font-semibold text-green-600/60'>
                 {product.name}
               </h1>
               <p className='text-sm font-thin md:text-base text-gray-200'>
