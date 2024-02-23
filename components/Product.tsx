@@ -6,7 +6,8 @@ import { FaPlus } from 'react-icons/fa'
 import { LeatherChairProps } from '@/types'
 import { addToCart } from '@/store/nextSlice'
 import { useDispatch } from 'react-redux'
-
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 const Product = () => {
   const dispatch = useDispatch()
   return (
@@ -53,16 +54,22 @@ const Product = () => {
                     <h1 className='font-bold '>${price}</h1>
 
                     <div className=''>
+                      <ToastContainer />
                       <div className=' w-full grid items-end  rounded-lg place-items-center'>
                         <button
-                         onClick={()=>{
-                          dispatch(addToCart({
-                            img:img,
-                            name:name,
-                            price:price,
-                            quantity:1
-                          }))
-                         }}
+                          onClick={() => {
+                            dispatch(
+                              addToCart({
+                                img: img,
+                                name: name,
+                                price: price,
+                                quantity: 1,
+                              })
+                            )
+                            toast.success(`${name} added to cart`, {
+                              position: 'top-center',
+                            })
+                          }}
                           className='w-10 h-10 rounded-full bg-black  text-white opacity-0 group-hover:opacity-100 -mb-8 grid place-items-center'
                         >
                           <FaPlus />

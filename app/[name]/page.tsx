@@ -6,6 +6,8 @@ import Link from 'next/link'
 import { addToCart } from '@/store/nextSlice'
 import { useDispatch } from 'react-redux'
 import { LeatherChairProps } from '@/types'
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 const ProductData = () => {
   const dispatch = useDispatch()
@@ -25,6 +27,7 @@ const ProductData = () => {
 
   return (
     <div className='  bg-black/90'>
+      <ToastContainer/>
       {product ? (
         <div className='pb-36 md:pb-28 w-[90vw] -mt-20  pt-24 md:w-[80vw] mx-auto '>
           <h1 className='text-left text-white'>
@@ -57,7 +60,7 @@ const ProductData = () => {
 
               <button
                 onClick={() =>
-                  dispatch(
+                 { dispatch(
                     addToCart({
                       name: product.name,
                       price: product.price,
@@ -65,6 +68,10 @@ const ProductData = () => {
                       quantity: 1,
                     })
                   )
+                  toast.success(`${product.name} added to cart`, {
+                    position:'top-center'
+                  })
+                }
                 }
                 className='uppercase text-white bg-green-700/60 p-2 rounded-md w-full hover:bg-green-800'
               >
