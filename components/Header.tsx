@@ -76,7 +76,7 @@ const Header = () => {
           </div>
         </div>
         <div className='lg:hidden'>
-          <button onClick={() => setButton(true)} className='text-xl '>
+          <button onClick={() => setButton(true)} className='text-xl text-white '>
             <FaBars />
           </button>
         </div>

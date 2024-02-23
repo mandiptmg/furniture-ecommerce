@@ -1,10 +1,9 @@
 'use client'
 import { useSearchParams } from 'next/navigation'
 import Image from 'next/image'
-import { FaHeart, FaMinus, FaPlus } from 'react-icons/fa'
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
-import { addToCart, decreaseProduct, increaseProduct } from '@/store/nextSlice'
+import { addToCart } from '@/store/nextSlice'
 import { useDispatch } from 'react-redux'
 import { LeatherChairProps } from '@/types'
 
@@ -27,9 +26,16 @@ const ProductData = () => {
   return (
     <div className='  bg-black/90'>
       {product ? (
-        <div className='py-20 h-screen w-[90vw] -mt-20  pt-24 md:w-[80vw] mx-auto grid place-items-center'>
+        <div className='pb-36 md:pb-28 w-[90vw] -mt-20  pt-24 md:w-[80vw] mx-auto '>
+          <h1 className='text-left text-white'>
+            {' '}
+            <Link href='/'>
+              <span>HOME</span>
+            </Link>
+            /<span className='font-thin text-gray-200'>{product.name}</span>
+          </h1>
           <div className='grid gap-10 mt-10 md:gap-14  items-center md:grid-cols-2'>
-            <div className='max-w-lg'>
+            <div className='max-w-lg mx-auto '>
               <Image
                 src={product.img}
                 alt={product.name}
@@ -48,6 +54,22 @@ const ProductData = () => {
               <h1 className='text-base text-white  rounded-md font-medium'>
                 ${product.price}
               </h1>
+
+              <button
+                onClick={() =>
+                  dispatch(
+                    addToCart({
+                      name: product.name,
+                      price: product.price,
+                      img: product.img,
+                      quantity: 1,
+                    })
+                  )
+                }
+                className='uppercase text-white bg-green-700/60 p-2 rounded-md w-full hover:bg-green-800'
+              >
+                add to cart
+              </button>
             </div>
           </div>
         </div>
